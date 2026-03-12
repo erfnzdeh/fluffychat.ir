@@ -1,153 +1,42 @@
 @import "tailwindcss";
 
-.markdown li {
-    margin: 0px;
-    list-style: disc;
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('/assets/fonts/Vazirmatn-Variable.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
 }
 
-.markdown li::marker {
-    color: gray;
-}
-
-/* Extended Markdown styles (scoped under .markdown) */
-.markdown {
-    color: #1f2937;
-    /* gray-800 */
-    background-color: transparent;
-    line-height: 1.75;
-}
-
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5 {
-    margin-top: 1.25rem;
-    line-height: 1.25;
-    color: inherit;
-}
-
-.markdown h1 {
-    font-size: 2.25rem;
-    /* 36px */
-    font-weight: 700;
-}
-
-.markdown h2 {
-    font-size: 1.5rem;
-    /* 28px */
-    font-weight: 700;
-    border-top: 0;
-    /* keep previous style minimal */
-}
-
-.markdown h3 {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.markdown h4 {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.markdown h5 {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.markdown p {
-    margin-bottom: 1rem;
+@font-face {
+    font-family: 'Zen Kurenaido';
+    src: url('/assets/fonts/ZenKurenaido-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 a {
     color: #6b21a8;
 }
 
-.markdown a,
 .features a {
     text-decoration: underline;
+}
+
+a.btn-download {
+    color: white;
+}
+
+a.btn-download:hover {
+    color: white;
 }
 
 a:hover {
     color: #a867dd;
 }
 
-.markdown ul,
-.markdown ol {
-    margin: 0 0 1rem 1.25rem;
-    padding: 0;
-}
-
-.markdown code {
-    background: rgba(0, 0, 0, 0.03);
-    padding: 0.15rem 0.35rem;
-    border-radius: 0.375rem;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace;
-    font-size: 0.9em;
-}
-
-.markdown pre {
-    background: #0f172a;
-    /* slate-900 */
-    color: #e6eef8;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    overflow: auto;
-    margin-bottom: 1rem;
-}
-
-.markdown pre code {
-    background: transparent;
-    padding: 0;
-    color: inherit;
-}
-
-.markdown blockquote {
-    border-left: 4px solid #e5e7eb;
-    /* gray-200 */
-    padding-left: 1rem;
-    color: #6b7280;
-    /* gray-500 */
-    margin: 0 0 1rem 0;
-}
-
-.markdown table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1rem;
-}
-
-.markdown th,
-.markdown td {
-    border: 1px solid #e5e7eb;
-    padding: 0.5rem;
-    text-align: left;
-}
-
-.markdown img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0.5rem 0;
-}
-
-.markdown hr {
-    border: none;
-    border-top: 1px solid #e5e7eb;
-    margin: 1.5rem 0;
-}
-
-/* subtle typographic improvements */
-.markdown small {
-    color: #6b7280;
-}
-
 @media (prefers-color-scheme: dark) {
-    .markdown {
-        color: white;
-    }
-
     a {
         color: #d0cee2;
     }
@@ -155,5 +44,4 @@ a:hover {
     a:hover {
         color: #9a6cbe;
     }
-
 }

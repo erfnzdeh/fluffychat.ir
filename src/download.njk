@@ -1,0 +1,47 @@
+---
+title: دانلود مستقیم
+layout: "layout.njk"
+permalink: "download/index.html"
+---
+
+<div class="max-w-2xl w-full px-4 mb-16">
+    <h1 class="text-3xl text-purple-600 dark:text-purple-300 mb-6 text-center">{{ site.download }}</h1>
+
+    {% if downloads and downloads.version %}
+    <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
+        نسخه: <span class="font-bold" dir="ltr">{{ downloads.version }}</span>
+    </p>
+
+    <div class="space-y-4">
+        {% for file in downloads.files %}
+        <a href="/assets/downloads/{{ file.filename }}" class="block no-underline">
+            <div class="flex items-center justify-between p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-500 transition-colors bg-white dark:bg-slate-700">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold text-lg dark:text-white">{{ file.label }}</span>
+                        {% if file.recommended %}
+                        <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-full">پیشنهادی</span>
+                        {% endif %}
+                    </div>
+                    <span class="text-sm text-gray-500 dark:text-gray-400" dir="ltr">{{ file.filename }}</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400 mx-2">·</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400" dir="ltr">{{ file.size }}</span>
+                </div>
+                <span class="text-purple-600 dark:text-purple-400 text-2xl">↓</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    {% else %}
+    <p class="text-center text-gray-500 dark:text-gray-400">
+        فایل‌های دانلود هنوز آماده نشده‌اند. لطفاً بعداً مراجعه کنید.
+    </p>
+    {% endif %}
+
+    <p class="text-center text-sm text-gray-400 dark:text-gray-500 mt-8">
+        این فایل‌ها مستقیماً از
+        <a href="https://github.com/krille-chan/fluffychat/releases" target="_blank" class="underline">انتشارات گیت‌هاب</a>
+        دریافت شده‌اند.
+    </p>
+</div>

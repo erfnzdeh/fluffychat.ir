@@ -1,4 +1,4 @@
-name: Main Deploy Workflow
+name: Build
 
 on:
   push:
@@ -23,8 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Prepare web
-        run: ./prepare.sh
       - uses: actions/setup-node@v6
       - run: npm install tailwindcss @tailwindcss/cli
       - run: npx tailwindcss -i ./src/styles.css -o ./src/assets/tailwind.css --minify

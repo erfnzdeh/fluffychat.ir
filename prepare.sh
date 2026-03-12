@@ -1,2 +1,0 @@
-curl https://raw.githubusercontent.com/krille-chan/fluffychat/refs/heads/main/CHANGELOG.md >> src/changelog.md
-curl https://raw.githubusercontent.com/krille-chan/fluffychat/refs/heads/main/PRIVACY.md >> src/privacy.md

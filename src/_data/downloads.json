@@ -1,0 +1,28 @@
+{
+    "version": "v2.4.1",
+    "files": [{
+        "filename": "fluffychat-linux-arm64.tar.gz",
+        "label": "لینوکس (ARM64)",
+        "platform": "linux",
+        "size": "31.9 MB",
+        "recommended": false
+    },{
+        "filename": "fluffychat-linux-x64.tar.gz",
+        "label": "لینوکس (x86_64)",
+        "platform": "linux",
+        "size": "33.4 MB",
+        "recommended": false
+    },{
+        "filename": "fluffychat-web.tar.gz",
+        "label": "نسخه وب",
+        "platform": "web",
+        "size": "16.5 MB",
+        "recommended": false
+    },{
+        "filename": "fluffychat.apk",
+        "label": "اندروید (APK)",
+        "platform": "android",
+        "size": "135.2 MB",
+        "recommended": false
+    }]
+}

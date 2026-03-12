@@ -3,44 +3,46 @@
 ---
 
 <!DOCTYPE html>
-<html lang="{{ lang }}"></html>
-<html>
+<html lang="fa" dir="rtl">
     <head>
         <meta charset="utf-8">
-        <title>FluffyChat Official Website | {{ title }}</title>
-        <meta name="identifier-url" content="https://fluffychat.im"/>
-        <meta name="title" content="FluffyChat Official Website"/>
-        <meta name="description" content="The cutest messenger in the Matrix network"/>
-        <meta name="abstract" content="FluffyChat is the cutest messenger in the Matrix network"/>
-        <meta name="keywords" content="FluffyChat, Matrix, Flutter, App"/>
+        <title>{{ site.title }} | {{ title }}</title>
+        <meta name="identifier-url" content="https://fluffychat.ir"/>
+        <meta name="title" content="{{ site.title }}"/>
+        <meta name="description" content="{{ site.description }}"/>
+        <meta name="abstract" content="{{ site.description }}"/>
+        <meta name="keywords" content="FluffyChat, Matrix, فلافی‌چت, ماتریکس, پیام‌رسان, رمزنگاری"/>
         <meta name="author" content="Krille Fear"/>
         <meta name="revisit-after" content="15"/>
-        <meta name="language" content="EN"/>
+        <meta name="language" content="FA"/>
         <meta name="robots" content="All"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="{{ site.title }}"/>
+        <meta property="og:description" content="{{ site.description }}"/>
+        <meta property="og:locale" content="fa_IR"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://fluffychat.ir"/>
+        <meta property="og:image" content="/assets/info-logo.png"/>
         <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
         <link rel="preload" href="/assets/tailwind.css" as="style" onload="this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/assets/tailwind.css"></noscript>
     </head>
     <body
         class="flex flex-col items-center min-h-screen w-full bg-white dark:bg-slate-800"
-        style="font-family: 'Zen Kurenaido', sans-serif;">
+        style="font-family: 'Vazirmatn', 'Zen Kurenaido', sans-serif;">
         <!--Header-->
         <div class="w-full lg:h-12 min-h-12 py-4 lg:py-0 mb-8 border-b border-gray-200 dark:border-gray-700">
-            <nav class="flex flex-wrap h-full justify-center items-center space-x-6 w-full max-w-4xl m-auto">
-                <a href="/{{ lang }}/" class="{{ "underline" if (title=="Home") }} text-lg">{{ i18n[lang].website.home }}</a>
-                <a href="/{{ lang }}/faq" class="{{ "underline" if (title=="FAQ") }} text-lg">{{ i18n[lang].website.faq }}</a>
-                <a href="/{{ lang }}/changelog" class="{{ "underline" if (title=="Changelog") }} text-lg">
-                    {{ i18n[lang].website.changelog }}</a>
-                <a href="https://ko-fi.com/krille/posts" target="_blank" class="text-lg">{{ i18n[lang].website.blog }}
-                </a>
+            <nav class="flex flex-wrap h-full justify-center items-center gap-x-6 w-full max-w-4xl m-auto">
+                <a href="/" class="{{ "underline" if (title=="خانه") }} text-lg">{{ site.home }}</a>
+                <a href="https://fluffychat.im/en/faq" target="_blank" class="text-lg">{{ site.faq }}</a>
+                <a href="https://ko-fi.com/krille/posts" target="_blank" class="text-lg">{{ site.blog }}</a>
                 <div class="lg:flex-grow"></div>
                 <a href='https://ko-fi.com/C1C86VN53' class="hover:scale-110 transition-transform" target='_blank'>
-                    <div class="rounded-xl bg-slate-900 dark:bg-slate-50 p-2 flex flex-row spacing-4"><img src="/assets/ko-fi.png" class="h-5 mr-2"/>
-                        <span class="text-white dark:text-black text-xs flex items-center mr-2">{{ i18n[lang].website.supportMeOnKoFi }}</span>
+                    <div class="rounded-xl bg-slate-900 dark:bg-slate-50 p-2 flex flex-row gap-2"><img src="/assets/ko-fi.png" class="h-5"/>
+                        <span class="text-white dark:text-black text-xs flex items-center">{{ site.supportMeOnKoFi }}</span>
                     </div>
                 </a>
-                <a href="https://troet.cafe/@krille" rel="me" class="m-2 hover:scale-110 transition-transform "><img src="/assets/mastodon.svg" class="h-7"/>
+                <a href="https://troet.cafe/@krille" rel="me" class="m-2 hover:scale-110 transition-transform"><img src="/assets/mastodon.svg" class="h-7"/>
                 </a>
             </nav>
         </div>
@@ -48,40 +50,41 @@
         <!--Footer-->
         <div class="w-full flex justify-center border-t border-gray-200 dark:border-gray-700">
             <footer class="w-full text-center max-w-4xl p-4 text-slate-700 dark:text-slate-200">
-                <a class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm" href="/{{ lang }}/impressum">
-                    {{ i18n[lang].website.impressumTitle }}</a>
+                <a class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm" href="https://fluffychat.im/en/impressum" target="_blank">
+                    {{ site.impressumTitle }}</a>
                 -
-                <a class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm" href="/{{ lang }}/privacy">
-                    {{ i18n[lang].website.privacyPolicy }}</a>
+                <a class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm" href="https://fluffychat.im/en/privacy" target="_blank">
+                    {{ site.privacyPolicy }}</a>
                 -
-                <a class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm" href="/{{ lang }}/tos">
-                    {{ i18n[lang].website.termsOfService }}</a>
-                -
-                <a
-                    class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm"
-                    href="https://github.com/krille-chan/fluffychat">{{ i18n[lang].website.source_code }}</a>
+                <a class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm" href="https://fluffychat.im/en/tos" target="_blank">
+                    {{ site.termsOfService }}</a>
                 -
                 <a
                     class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm"
-                    href="https://liberapay.com/KrilleChritzelius">{{ i18n[lang].website.liberapay }}</a>
+                    href="https://github.com/krille-chan/fluffychat">{{ site.source_code }}</a>
                 -
                 <a
                     class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm"
-                    href="https://hosted.weblate.org/projects/fluffychat/">{{ i18n[lang].website.translations }}</a>
+                    href="https://liberapay.com/KrilleChritzelius">{{ site.liberapay }}</a>
                 -
                 <a
                     class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm"
-                    href="https://googlefonts.github.io/noto-emoji-animation/">{{ i18n[lang].website.noto_emoji }}</a>
+                    href="https://hosted.weblate.org/projects/fluffychat/">{{ site.translations }}</a>
                 -
                 <a
                     class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm"
-                    href="https://krille-chan.github.io">{{ i18n[lang].website.created_by }}</a>
+                    href="https://googlefonts.github.io/noto-emoji-animation/">{{ site.noto_emoji }}</a>
+                -
+                <a
+                    class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm"
+                    href="https://krille-chan.github.io">{{ site.created_by }}</a>
                 <br/>
-                <span class="text-slate-700 dark:text-slate-200 text-sm">{{ i18n[lang].website.language_title }}:
+                <span class="text-slate-700 dark:text-slate-200 text-sm">
+                    <a class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm" href="https://github.com/erfnzdeh/fluffychat.ir" target="_blank">کلون فارسی غیررسمی</a>
+                    از
+                    <a class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm" href="https://github.com/krille-chan/fluffychat-website" target="_blank">سایت رسمی</a>
+                    با هدف دسترس‌پذیری در زمان اختلال اینترنت ایران
                 </span>
-                {% for language in i18n.languages %}
-                    <a class="text-slate-700 dark:text-slate-200 underline hover:text-purple-800 text-sm" href="/{{ language }}/">{{ i18n[language].website.languageName }}</a>
-                {% endfor %}
             </footer>
         </div>
     </body>
