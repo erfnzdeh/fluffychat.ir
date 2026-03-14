@@ -96,6 +96,42 @@ Output is in `./public/`.
 npx @11ty/eleventy --serve
 ```
 
+## Deployment
+
+Static files served by nginx. See the [original repository](https://github.com/krille-chan/fluffychat-website) for upstream changes.
+
+### Analytics
+
+Basic visit metrics are publicly available at `/metrics`. They are generated from nginx access logs by [GoAccess](https://goaccess.io/) and refreshed every five minutes via cron. No JavaScript tracking, no cookies, no external services.
+
+**Setup:**
+
+1. Install GoAccess:
+   ```
+   apt install goaccess
+   ```
+
+2. Add a cron job (`crontab -e`):
+   ```
+   */5 * * * * goaccess /var/log/nginx/access.log -o /var/www/fluffychat.ir/metrics/index.html --log-format=COMBINED
+   ```
+   Adjust the log and output paths to match your server layout.
+
+3. Add an nginx location block inside the `fluffychat.ir` server config:
+   ```nginx
+   location /metrics {
+       alias /var/www/fluffychat.ir/metrics;
+       index index.html;
+   }
+   ```
+
+4. Reload nginx:
+   ```
+   systemctl reload nginx
+   ```
+
+The metrics page is intentionally public — there is no sensitive data in it, and transparency about traffic is consistent with the project's open-source ethos.
+
 ## Credits
 
 - Original project by [Krille Fear (krille-chan)](https://github.com/krille-chan) - [krille-chan/fluffychat-website](https://github.com/krille-chan/fluffychat-website)
